@@ -5,13 +5,13 @@
 	</target>
 	<target name="package" depends="compile" description="packaging the the files">
 		<mkdir dir="build/jars"/>
-		<jar destfile="build/jars/HelloWorld.jar" basedir="build/classes">
+		<jar destfile="build/jars/Factorial.jar" basedir="build/classes">
 			<manifest>
-				<attribute name="Main-Class" value="HelloWorld"/>
+				<attribute name="Main-Class" value="Factorial"/>
 			</manifest>
 		</jar>
 	</target>
 	<target name="run" depends="package" description="run the packsge">
-		<java jar="build/jars/HelloWorld.jar" fork="true"/>
+		<java jar="build/jars/Factorial.jar" fork="true"/>
 	</target>
 </project>
